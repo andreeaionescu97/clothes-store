@@ -3,30 +3,56 @@
 <div class="sidenav">
   <div class="sidenav__component">
     <a href="#">GENDER</a>
-      <form>
-        <input type="checkbox" id="gender1" name="gender1">
-        <label for="gender1">men</label><br>
-        <input type="checkbox" id="gender2" name="gender2">
-        <label for="gender2">unisex</label><br>
-        <input type="checkbox" id="gender3" name="gender3">
-        <label for="gender3">women</label><br>
-    </form>
+      <label class="container">Men
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Unisex
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Women
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
   </div>
-  <a href="#">CATEGORIES</a>
-  <a href="#clients">COLOUR</a>
-  <a href="#contact">PRICE</a>
-
-
-  <button class="dropdown-btn">Dropdown
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+  <div class="sidenav__component">
+     <button class="dropdown-btn">CATEGORIES
+       <i class="fa fa-caret-down"></i>
+     </button>
+    <div class="dropdown-container">
+      <a href="#" class="sidebar_category cool-link">Hoodies</a>
+      <a href="#" class="sidebar_category cool-link">Jackets</a>
+      <a href="#" class="sidebar_category cool-link">Sweaters</a>
+      <a href="#" class="sidebar_category cool-link">T-shirts</a>
+      <a href="#" class="sidebar_category cool-link">Tops</a>
+      <a href="#" class="sidebar_category cool-link">Shirts</a>
+    </div>
   </div>
-
-
+  <div class="sidenav__component">
+    <a href="#clients">COLOUR</a>
+    <div class="colours__list_flex">
+      <div class="colours__list_sidebar">
+        <div class="colour-green"></div>
+        <div class="colour-blue"></div>
+        <div class="colour-yellow"></div>
+        <div class="colour-purple"></div>
+        <div class="colour-red"></div>
+        <div class="colour-pink"></div>
+        <div class="colour-orange"></div>
+        <div class="colour-white"></div>
+        <div class="colour-gray"></div>
+        <div class="colour-black"></div>
+      </div>
+    </div>
+  </div>
+  <div class="sidenav__component">
+    <a href="#contact">PRICE</a>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="500" value="250" class="slider" id="myRange">
+      <p>Value: <span id="demo"></span>&nbsp;€</p>
+    </div>
+  </div>
 </div>
 
 <!--Items List -->

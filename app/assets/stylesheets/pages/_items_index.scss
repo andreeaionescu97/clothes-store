@@ -16,7 +16,7 @@
   // margin: 50px;
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   padding: 16px;
 }
@@ -58,7 +58,7 @@
 }
 
 /* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
+.dropdown-btn:hover {
   color: $primary-green;
 }
 
@@ -66,8 +66,8 @@
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
-  background-color: #262626;
-  padding-left: 8px;
+  background-color: $primary-black;
+  padding-left: 16px;
 }
 
 /* Optional: Style the caret down icon */
@@ -81,4 +81,280 @@
   margin-left: 28px;
  }
 
+ .container {
+  display: block;
+  position: relative;
+  margin-left: 28px;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #E8E8E8;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #F8F8F8;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #C0C0C0;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: $primary-green;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sidebar_category {
+  font-size: 16px !important;
+  text-decoration: none;
+}
+
+.sidebar_category:hover {
+  color: $primary-green;
+}
+
+.cool-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background:$primary-green;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 50%;
+    //transition: width .3s;
+}
+
+.colours__list_flex {
+  display: flex;
+  width: 100px;
+}
+
+.colours__list_sidebar {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  width: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.colour-green {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 28px;
+}
+
+.colour-blue {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: blue;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 10px;
+}
+
+.colour-yellow {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: yellow;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 10px;
+}
+
+.colour-purple {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: purple;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 10px;
+}
+
+.colour-red {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 10px;
+}
+
+.colour-pink {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: pink;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 28px;
+  margin-top: 10px;
+}
+
+.colour-orange {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: orange;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.colour-white {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.colour-gray {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.colour-black {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  border-style: solid;
+  border-color: #C0C0C0;
+  border-width: 0.2px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.slidecontainer {
+  width: 70%;
+  margin-left: 28px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-bottom: 20px;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: $primary-green;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: $primary-green;
+  cursor: pointer;
+}
+
+#demo {
+  color: $primary-green;
+}
+
+.slidecontainer p {
+  color: #d3d3d3;
+}
 
